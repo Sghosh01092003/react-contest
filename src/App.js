@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Gender from "./Gender";
+import Heading from "./Heading";
+import Register from "./Register";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App =() =>{
+  return(
+  <>
+    <div className="container">
+      <div className="main">
+      <Heading/>
+      <div className="input-group">
+        <span className="first">First Name 
+        </span> 
+        <span className="last">Last Name </span>
+        <div>
+        <input type ="text" className="from-control" 
+        />
+        <input type ="text" className="from-controls" 
+        /></div>
+        <br/>
+        <span className="inputs">Email Address</span>
+        <input type ="text" className="control" 
+        /> 
+        <br/>
+        <Gender/>
+
+        <br/>
+        <span className="place">
+          City
+        </span>
+        <input type ="text" className="control"/> 
+        <br/>
+        <span className="place">
+          Country
+        </span>
+        <input type ="text" className="control"/> 
+        <br/>
+
+        <Register/>
+
+       
+        
+       
+        
+
+      </div>
+      
+      </div>
     </div>
+  </>
   );
 }
 
